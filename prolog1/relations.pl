@@ -5,6 +5,22 @@ parent(esther, margaret).
 parent(herbert, margaret).
 parent(herbert, jean).
 
+female(kim).
+female(holly).
+female(margaret).
+female(esther).
+female(jean).
+
+male(herbert).
+male(kent).
+
+mother(X, Y) :- female(X), parent(X, Y).
+
+father(X, Y) :- male(X), parent(X, Y).
+
+sister(X, Y) :- parent(Z, X), parent(Z, Y), female(X), not(X = Y).
+
+grandson(X, Y) :- parent(X, F), parent(F, Y), male(Y).
 
 grandparent(GP, GC) :-
   parent(GP, P), parent(P, GC).
