@@ -29,7 +29,7 @@ report :-
  These connect predicates establish the map.
  The meaning of connect(X,Dir,Y) is that if you
  are at X and you move in direction Dir, you
- get to Y. Recognized directsion are
+ get to Y. Recognized directions are
  forward, right and left.
 */
 connect(valley,forward,path).
